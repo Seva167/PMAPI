@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "Run Primitier": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Users\\User\\Documents\\Seva\\desktop\\primitierStuff\\Primitier\\Primitier.exe",
+      "workingDirectory": "C:\\Users\\User\\Documents\\Seva\\desktop\\primitierStuff\\Primitier\\"
+    },
+    "Debug Primitier": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Users\\User\\Documents\\Seva\\desktop\\primitierStuff\\Primitier\\Primitier.exe",
+      "commandLineArgs": "--melon.launchdebugger --melonloader.debug",
+      "workingDirectory": "C:\\Users\\User\\Documents\\Seva\\desktop\\primitierStuff\\Primitier\\"
+    }
+  }
+}
