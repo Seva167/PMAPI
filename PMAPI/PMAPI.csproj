@@ -45,6 +45,6 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="copy $(OutDir)$(AssemblyName).dll $(PRIMITIER_DIR)\Mods\" />
+    <Exec Command="copy $(OutDir)$(AssemblyName).dll &quot;$(PRIMITIER_DIR)\Mods\&quot;"/>
   </Target>
 </Project>
