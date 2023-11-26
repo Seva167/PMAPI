@@ -37,7 +37,7 @@ namespace PMAPI.Patches
     {
         private static void Postfix()
         {
-            GameEvents.CallOnWorldWasLoaded();
+            GameEvents.CallEvent("OnWorldWasLoaded");
         }
     }
 }

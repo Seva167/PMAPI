@@ -9,13 +9,13 @@ namespace PMAPI
 {
     internal static class GameEvents
     {
-        internal static void CallOnWorldWasLoaded()
+        internal static void CallEvent(string eventName)
         {
             foreach (var mod in PMAPIModRegistry.loadedMods)
             {
                 try
                 {
-                    mod.SendMessage("OnWorldWasLoaded");
+                    mod.SendMessage(eventName);
                 }
                 catch (Exception e)
                 {
