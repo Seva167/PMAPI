@@ -118,6 +118,9 @@ namespace TestMod
                 enName = "Rood",
                 jpName = "name3"
             });
+
+            // Make rood and blue slime compoundable to form blud
+            CubeMerge.compoundablePairs.Add(new Il2CppSystem.ValueTuple<Substance, Substance>(rood, Substance.Slime), new Il2CppSystem.ValueTuple<float, Substance, float>(1f, blud, 1f));
         }
 
         public override void OnUpdate()
