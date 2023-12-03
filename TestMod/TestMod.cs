@@ -146,13 +146,15 @@ namespace TestMod
             CustomSaveManager.RequestLoad(this);
         }
 
-        void Start()
+        CubeBase cubeBase;
+
+        void OnInitialize()
         {
             // Get the cube base
-            var cubeBase = GetComponent<CubeBase>();
+            cubeBase = GetComponent<CubeBase>();
 
             // Make it hooooooot
-            cubeBase.heat.AddHeat(10000f);
+            cubeBase.heat.AddHeat(1000000f);
         }
 
         // Saved variable

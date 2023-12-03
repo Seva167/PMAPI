@@ -20,4 +20,13 @@ namespace PMAPI.CustomSubstances.Patches
             }
         }
     }
+
+    [HarmonyPatch(typeof(CubeBase), nameof(CubeBase.Initialize))]
+    internal static class CubeBaseInitializePatch
+    {
+        private static void Postfix(CubeBase __instance)
+        {
+            __instance.gameObject.SendMessage("OnInitialize");
+        }
+    }
 }
