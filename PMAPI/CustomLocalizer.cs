@@ -13,6 +13,12 @@ namespace PMAPI
         static Dictionary<string, string> enDictionary = new();
         static Dictionary<string, string> jpDictionary = new();
 
+        static Dictionary<string, string> zhHansDictionary = new();
+        static Dictionary<string, string> deDictionary = new();
+        static Dictionary<string, string> esDictionary = new();
+        static Dictionary<string, string> frDictionary = new();
+        static Dictionary<string, string> ruDictionary = new();
+
         /// <summary>
         /// Reload localization
         /// </summary>
@@ -25,6 +31,22 @@ namespace PMAPI
                     break;
                 case "StringTable_ja":
                     ReloadTable(jpDictionary);
+                    break;
+
+                case "StringTable_zh-Hans":
+                    ReloadTable(zhHansDictionary);
+                    break;
+                case "StringTable_de":
+                    ReloadTable(deDictionary);
+                    break;
+                case "StringTable_es":
+                    ReloadTable(esDictionary);
+                    break;
+                case "StringTable_fr":
+                    ReloadTable(frDictionary);
+                    break;
+                case "StringTable_ru":
+                    ReloadTable(ruDictionary);
                     break;
             }
         }
@@ -56,6 +78,56 @@ namespace PMAPI
         public static void AddJpString(string key, string value)
         {
             jpDictionary.Add(key, value);
+        }
+
+        /// <summary>
+        /// Adds entry to Simplified Chinese localization table
+        /// </summary>
+        /// <param name="key">Localization displayNameKey (SUB_TEST)</param>
+        /// <param name="value">The text which is displayed to player</param>
+        public static void AddZhHansString(string key, string value)
+        {
+            zhHansDictionary.Add(key, value);
+        }
+
+        /// <summary>
+        /// Adds entry to German localization table
+        /// </summary>
+        /// <param name="key">Localization displayNameKey (SUB_TEST)</param>
+        /// <param name="value">The text which is displayed to player</param>
+        public static void AddDeString(string key, string value)
+        {
+            deDictionary.Add(key, value);
+        }
+
+        /// <summary>
+        /// Adds entry to Spanish localization table
+        /// </summary>
+        /// <param name="key">Localization displayNameKey (SUB_TEST)</param>
+        /// <param name="value">The text which is displayed to player</param>
+        public static void AddEsString(string key, string value)
+        {
+            esDictionary.Add(key, value);
+        }
+
+        /// <summary>
+        /// Adds entry to French localization table
+        /// </summary>
+        /// <param name="key">Localization displayNameKey (SUB_TEST)</param>
+        /// <param name="value">The text which is displayed to player</param>
+        public static void AddFrString(string key, string value)
+        {
+            frDictionary.Add(key, value);
+        }
+
+        /// <summary>
+        /// Adds entry to Russian localization table
+        /// </summary>
+        /// <param name="key">Localization displayNameKey (SUB_TEST)</param>
+        /// <param name="value">The text which is displayed to player</param>
+        public static void AddRuString(string key, string value)
+        {
+            ruDictionary.Add(key, value);
         }
     }
 }

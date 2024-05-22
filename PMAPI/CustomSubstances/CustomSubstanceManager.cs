@@ -45,6 +45,12 @@ namespace PMAPI.CustomSubstances
             CustomLocalizer.AddEnString(substanceParams.displayNameKey, cParams.enName);
             CustomLocalizer.AddJpString(substanceParams.displayNameKey, cParams.jpName);
 
+            CustomLocalizer.AddZhHansString(substanceParams.displayNameKey, cParams.zhHansName);
+            CustomLocalizer.AddDeString(substanceParams.displayNameKey, cParams.deName);
+            CustomLocalizer.AddEsString(substanceParams.displayNameKey, cParams.esName);
+            CustomLocalizer.AddFrString(substanceParams.displayNameKey, cParams.frName);
+            CustomLocalizer.AddRuString(substanceParams.displayNameKey, cParams.ruName);
+
             MelonLogger.Msg("Substance registered: " + EIDManager.eidDictionary[(Substance)id]);
             id--;
             return (Substance)id + 1;
@@ -63,6 +69,12 @@ namespace PMAPI.CustomSubstances
 
             CustomLocalizer.AddEnString(errorSubParams.displayNameKey, "Mod error");
             CustomLocalizer.AddJpString(errorSubParams.displayNameKey, "Moddu erroru");
+
+            CustomLocalizer.AddZhHansString(errorSubParams.displayNameKey, "Mod error");
+            CustomLocalizer.AddDeString(errorSubParams.displayNameKey, "Mod error");
+            CustomLocalizer.AddEsString(errorSubParams.displayNameKey, "Mod error");
+            CustomLocalizer.AddFrString(errorSubParams.displayNameKey, "le Mod error");
+            CustomLocalizer.AddRuString(errorSubParams.displayNameKey, "Ошибка мода");
         }
 
         public static Substance GetSubstanceByEID(string eid) => EIDManager.eidDictionary.FirstOrDefault(x => x.Value == eid).Key;
@@ -84,6 +96,31 @@ namespace PMAPI.CustomSubstances
         /// Name in Japanese
         /// </summary>
         public string jpName;
+
+        /// <summary>
+        /// Name in Simplified Chinese
+        /// </summary>
+        public string zhHansName;
+
+        /// <summary>
+        /// Name in German
+        /// </summary>
+        public string deName;
+
+        /// <summary>
+        /// Name in Spanish
+        /// </summary>
+        public string esName;
+
+        /// <summary>
+        /// Name in French
+        /// </summary>
+        public string frName;
+
+        /// <summary>
+        /// Name in Russian
+        /// </summary>
+        public string ruName;
 
         /// <summary>
         /// Delegate that is called whenever object is initalizing its script

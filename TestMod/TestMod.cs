@@ -90,6 +90,11 @@ namespace TestMod
             blud = CustomSubstanceManager.RegisterSubstance("blud", param, new CustomSubstanceParams
             {
                 enName = "Blud",
+                ruName = "Синево",
+                zhHansName = "zhHansName",
+                deName = "deName",
+                esName = "esName",
+                frName = "frName",
                 jpName = "name2",
                 behInit = (cb) =>
                 {
@@ -116,6 +121,7 @@ namespace TestMod
             rood = CustomSubstanceManager.RegisterSubstance("rood", param, new CustomSubstanceParams
             {
                 enName = "Rood",
+                ruName = "Кререво",
                 jpName = "name3"
             });
 
