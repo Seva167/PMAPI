@@ -44,7 +44,7 @@ namespace PMAPI.Patches
 
 namespace PMAPI.OreGen.Patches
 {
-    [HarmonyPatch(typeof(CubeGenerator), nameof(CubeGenerator.GenerateOre))]
+    [HarmonyPatch(typeof(CubeGenerator), nameof(CubeGenerator.GenerateOre), typeof(Substance), typeof(float), typeof(float), typeof(float), typeof(Vector3))]
     internal static class CubeGeneratorGenerateOrePatch
     {
         private static void Prefix(ref Substance substance, ref float minSize, ref float maxSize, ref float alpha)
